@@ -15,3 +15,34 @@ body {
 .section-center:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+
+.alert {
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+}
+
+.alert-danger {
+    color: #cd212a;
+    background: #f8d7da;
+}
+
+.alert-success {
+    color: #009B77;
+    background: #d4edd4;
+}
+
+.grocery-form:h3 {
+    text-align: center;
+    color: hsl(205,86%,17%);
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    display: flex;
+    justify-content: center;
+}
