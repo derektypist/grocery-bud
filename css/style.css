@@ -147,3 +147,21 @@ h3 {
 .delete-btn:hover {
     color: #cd212a;
 }
+
+.clear-btn {
+    text-transform: capitalize;
+    width: 10rem;
+    height: 1.5rem;
+    display: grid;
+    align-items: center;
+    background: transparent;
+    border-color: transparent;
+    color: hsl(360,71%,70%);
+    margin: 0 auto;
+    cursor: pointer;
+    margin-top: 1.25rem;
+}
+
+.clear-btn:hover {
+    color: #cd212a;
+}
