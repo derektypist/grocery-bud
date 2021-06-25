@@ -91,3 +91,12 @@ h3 {
     color: white;
     background: #49ace9;
 }
+
+.grocery-container {
+    margin-top: 2rem;
+    visibility: hidden;
+}
+
+.show-container {
+    visibility: visible;
+}
