@@ -20,6 +20,8 @@ form.addEventListener('submit',addItem);
 // Clear Items
 clearBtn.addEventListener('click',clearItems);
 
+const deleteBtn = document.querySelector('.delete-btn');
+
 // Functions
 function addItem(e) {
     e.preventDefault();
@@ -83,6 +85,7 @@ function clearItems() {
 
     container.classList.remove('show-container');
     displayAlert("empty list","danger");
+    setBackToDefault();
 }
 
 // Set Back to Default
