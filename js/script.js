@@ -27,12 +27,9 @@ window.addEventListener('DOMContentLoaded',setupItems);
 function addItem(e) {
     e.preventDefault();
     const value = grocery.value;
-    if (value) {
-
-    }
     const id = new Date().getTime().toString();
     if (value && !editFlag) {
-        
+        createListItem(item,value);
         // Display alert
         displayAlert("item added to the list","success");
         // Show container
@@ -166,23 +163,20 @@ function setupItems() {
 
 function createListItem(id,value) {
     const element = document.createElement('article');
-        // Add class
-        element.classList.add('grocery-item');
-        // Add id
-        const attr = document.createAttribute('data-id');
-        attr.value = id;
-        element.setAttributeNode(attr);
-        element.innerHTML = `<p class="title">${value}</p>
+    let attr = document.createAttribute('data-id');
+    attr.value = id;
+    element.setAttributeNode(attr);
+    element.innerHTML = `<p class="title">${value}</p>
                     <div class="btn-container">
                         <button type="button" class="edit-btn"><i class="fas fa-edit"></i></button>
                         <button type="button" class="delete-btn"><i class="fas fa-trash"></i></button>
                         </div>`;
 
-        const deleteBtn = element.querySelector('.delete-btn');
-        const editBtn = element.querySelector('.edit-btn');
-
-        deleteBtn.addEventListener('click',deleteItem);
-        editBtn.addEventListener('click',editItem);
-        // Append child
-        list.appendChild(element);
+    // Add Event Listeners to Both Buttons
+    const deleteBtn = element.querySelector('.delete-btn');
+    deleteBtn.addEventListener('click',deleteItem);
+    const editBtn = element.querySelector('.edit-btn');
+    editBtn.addEventListener('click',editItem);
+    // Append child
+    list.appendChild(element);
 }
