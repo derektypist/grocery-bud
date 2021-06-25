@@ -46,7 +46,7 @@ h3 {
     background: #d4edd4;
 }
 
-.grocery-form:h3 {
+.grocery-form h3 {
     text-align: center;
     color: hsl(205,86%,17%);
     margin-bottom: 1.5rem;
