@@ -20,7 +20,7 @@ form.addEventListener('submit',addItem);
 // Clear Items
 clearBtn.addEventListener('click',clearItems);
 
-const deleteBtn = document.querySelector('.delete-btn');
+
 
 // Functions
 function addItem(e) {
@@ -44,6 +44,8 @@ function addItem(e) {
                         <button type="button" class="delete-btn"><i class="fas fa-trash"></i></button>
                         </div>`;
 
+        const deleteBtn = element.querySelector('.delete-btn');
+        const editBtn = element.querySelector('.edit-btn');
         // Append child
         list.appendChild(element);
         // Display alert
