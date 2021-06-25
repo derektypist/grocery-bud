@@ -18,8 +18,17 @@ let editID = "";
 form.addEventListener('submit',addItem);
 
 // Functions
-function addItem() {
-    
+function addItem(e) {
+    e.preventDefault();
+    const value = grocery.value;
+    const id = new Date().getTime().toString();
+    if (value !== '' && editFlag === false) {
+        
+    } else if (value !== '' && editFlag === true) {
+
+    } else {
+
+    }
 }
 
 // Local Storage
