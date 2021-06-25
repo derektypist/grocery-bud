@@ -125,13 +125,8 @@ function editItem(e) {
     editFlag = true;
     editID = element.dataset.id;
     submitBtn.textContent = "edit";
-    displayAlert("item removed","danger");
-    setBackToDefault();
-    // Remove from local Storage
-    removeFromLocalStorage(id);
+
 }
-
-
 
 // Set Back to Default
 function setBackToDefault() {
@@ -143,16 +138,29 @@ function setBackToDefault() {
 
 // Local Storage
 function addToLocalStorage(id,value) {
+    const grocery = {id,value};
+    let items = getLocalStorage();
+    items = items.filter(function(item) {
+        if (item.id !==item) {
+            return item;
+        }
+    });
+    localStorage.setItem("list",JSON.stringify(items));
 
 }
 
 function removeFromLocalStorage(id) {
+    let items = getLocalStorage();
 
 }
 
 function editLocalStorage(id,value) {
     
 
+}
+
+function getLocalStorage() {
+    return localStorage.getItem("list") ? JSON.parse(localStorage.getItem("list")) : [];
 }
 
 /*
