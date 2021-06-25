@@ -71,3 +71,18 @@ h3 {
 #grocery:placeholder {
     color: hsl(210,22%,49%);
 }
+
+.submit-btn {
+    text-transform: capitalize;
+    border-color: transparent;
+    background: hsl(205,86%,81%);
+    flex: 0 0 5rem;
+    display: grid;
+    align-items: center;
+    padding: 0.25rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    cursor: pointer;
+    content: #49ace9;
+    font-size: 0.85rem;
+}
