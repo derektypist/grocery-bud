@@ -56,9 +56,9 @@ body {
     border-color: transparent;
     font-size: 1rem;
     flex: 1 0 auto;
-    color: #00758f;
+    color: hsl(210,22%,49%);
 }
 
 #grocery:placeholder {
-    color: #00758f;
+    color: hsl(210,22%,49%);
 }
