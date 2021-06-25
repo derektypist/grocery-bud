@@ -38,6 +38,12 @@ function addItem(e) {
 function displayAlert(text,action) {
     alert.textContent = text;
     alert.classList.add(`alert-${action}`);
+
+    // Remove alert
+    setTimeout(function() {
+        alert.textContent = '';
+        alert.classList.remove(`alert-${action}`);
+    },1000);
 }
 
 // Local Storage
