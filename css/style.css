@@ -69,9 +69,10 @@ h3 {
     color: hsl(210,22%,49%);
 }
 
-#grocery:placeholder {
+#grocery::placeholder {
     color: hsl(210,22%,49%);
 }
+
 
 .submit-btn {
     text-transform: capitalize;
