@@ -29,7 +29,23 @@ function addItem(e) {
     const value = grocery.value;
     const id = new Date().getTime().toString();
     if (value && !editFlag) {
-        createListItem(item,value);
+        const element = document.createElement('article');
+        let attr = document.createAttribute('data-id');
+        attr.value = id;
+        element.setAttributeNode(attr);
+        element.innerHTML = `<p class="title">${value}</p>
+                        <div class="btn-container">
+                        <button type="button" class="edit-btn"><i class="fas fa-edit"></i></button>
+                        <button type="button" class="delete-btn"><i class="fas fa-trash"></i></button>
+                        </div>`;
+
+        // Add Event Listeners to Both Buttons
+        const deleteBtn = element.querySelector('.delete-btn');
+        deleteBtn.addEventListener('click',deleteItem);
+        const editBtn = element.querySelector('.edit-btn');
+        editBtn.addEventListener('click',editItem);
+        // Append child
+        list.appendChild(element);
         // Display alert
         displayAlert("item added to the list","success");
         // Show container
@@ -161,22 +177,3 @@ function setupItems() {
     }  
 }
 
-function createListItem(id,value) {
-    const element = document.createElement('article');
-    let attr = document.createAttribute('data-id');
-    attr.value = id;
-    element.setAttributeNode(attr);
-    element.innerHTML = `<p class="title">${value}</p>
-                    <div class="btn-container">
-                        <button type="button" class="edit-btn"><i class="fas fa-edit"></i></button>
-                        <button type="button" class="delete-btn"><i class="fas fa-trash"></i></button>
-                        </div>`;
-
-    // Add Event Listeners to Both Buttons
-    const deleteBtn = element.querySelector('.delete-btn');
-    deleteBtn.addEventListener('click',deleteItem);
-    const editBtn = element.querySelector('.edit-btn');
-    editBtn.addEventListener('click',editItem);
-    // Append child
-    list.appendChild(element);
-}
