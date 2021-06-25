@@ -21,14 +21,23 @@ form.addEventListener('submit',addItem);
 function addItem(e) {
     e.preventDefault();
     const value = grocery.value;
-    const id = new Date().getTime().toString();
-    if (value !== '' && editFlag === false) {
-        
-    } else if (value !== '' && editFlag === true) {
-
-    } else {
+    if (value) {
 
     }
+    const id = new Date().getTime().toString();
+    if (value && !editFlag) {
+        
+    } else if (value && editFlag) {
+
+    } else {
+        displayAlert('please enter value','danger');
+    }
+}
+
+// Display alert
+function displayAlert(text,action) {
+    alert.textContent = text;
+    alert.classList.add(`alert-${action}`);
 }
 
 // Local Storage
