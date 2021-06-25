@@ -5,6 +5,11 @@ body {
     background: hsl(210,36%,96%);
 }
 
+h3 {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+}
+
 /* Grocery List */
 .section-center {
     background: white;
