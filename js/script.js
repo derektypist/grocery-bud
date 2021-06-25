@@ -48,7 +48,7 @@ function addItem(e) {
         // Add to local Storage
         addToLocalStorage(id,value);
         // Set Back to Default
-        
+        setBackToDefault();
     } else if (value && editFlag) {
 
     } else {
@@ -67,7 +67,13 @@ function displayAlert(text,action) {
         alert.classList.remove(`alert-${action}`);
     },1000);
 }
+// Set Back to Default
+function setBackToDefault() {
+
+}
 
 // Local Storage
+function addToLocalStorage(id,value) {
 
+}
 // Setup Items
