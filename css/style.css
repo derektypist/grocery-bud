@@ -1,0 +1,17 @@
+/* Global Styles and Classes */
+body {
+    font-family: "Roboto", Arial, Verdana, sans-serif;
+    color: hsl(209,61%,16%);
+    background: hsl(210,36%,96%);
+}
+
+/* Grocery List */
+.section-center {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.section-center:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
