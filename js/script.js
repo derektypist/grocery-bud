@@ -45,6 +45,10 @@ function addItem(e) {
         displayAlert("item added to the list","success");
         // Show container
         container.classList.add('show-container');
+        // Add to local Storage
+        addToLocalStorage(id,value);
+        // Set Back to Default
+        
     } else if (value && editFlag) {
 
     } else {
