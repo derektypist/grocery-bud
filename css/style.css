@@ -86,3 +86,8 @@ h3 {
     content: #49ace9;
     font-size: 0.85rem;
 }
+
+.submit-btn:hover {
+    color: white;
+    background: #49ace9;
+}
