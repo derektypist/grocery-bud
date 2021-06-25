@@ -46,3 +46,19 @@ body {
     display: flex;
     justify-content: center;
 }
+
+#grocery {
+    padding: 0.25rem;
+    padding-left: 1rem;
+    background: hsl(210,36%,96%);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-color: transparent;
+    font-size: 1rem;
+    flex: 1 0 auto;
+    color: #00758f;
+}
+
+#grocery:placeholder {
+    color: #00758f;
+}
