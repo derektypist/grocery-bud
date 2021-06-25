@@ -20,7 +20,8 @@ form.addEventListener('submit',addItem);
 // Clear Items
 clearBtn.addEventListener('click',clearItems);
 
-
+// Load Items
+window.addEventListener('DOMContentLoaded',setupItems);
 
 // Functions
 function addItem(e) {
@@ -184,3 +185,13 @@ const oranges = JSON.parse(localStorage.getItem("orange"));
 localStorage.removeItem("orange");
 
 // Setup Items
+function setupItems() {
+    let items = getLocalStorage();
+    if (items.length > 0) {
+
+    }
+}
+
+function createListItem(id,value) {
+    
+}
