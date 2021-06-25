@@ -62,6 +62,8 @@ function addItem(e) {
     } else if (value && editFlag) {
         editElement.innerHTML = value;
         displayAlert("value changed","success");
+        // Edit local Storage
+        editLocalStorage(editID,value);
         setBackToDefault();
     } else {
         displayAlert('please enter value','danger');
