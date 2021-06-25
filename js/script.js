@@ -152,18 +152,6 @@ function getLocalStorage() {
     return localStorage.getItem("list") ? JSON.parse(localStorage.getItem("list")) : [];
 }
 
-/*
-
-    localStorage API
-    setItem
-    getItem
-    removeItem
-    Save As Strings
-*/
-
-localStorage.setItem("orange",JSON.stringify(["item","item2"]));
-const oranges = JSON.parse(localStorage.getItem("orange"));
-localStorage.removeItem("orange");
 
 // Setup Items
 function setupItems() {
